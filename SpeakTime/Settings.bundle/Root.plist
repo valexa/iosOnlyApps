@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Set the interval for saying the time.</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<integer>600</integer>
+			<key>Key</key>
+			<string>timerInterval</string>
+			<key>Title</key>
+			<string>Value</string>
+			<key>Titles</key>
+			<array>
+				<string>1 minute</string>
+				<string>5 minutes</string>
+				<string>10 minutes</string>
+				<string>15 minutes</string>
+				<string>20 minutes</string>
+				<string>25 minutes</string>
+				<string>30 minutes</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<integer>60</integer>
+				<integer>300</integer>
+				<integer>600</integer>
+				<integer>900</integer>
+				<integer>1200</integer>
+				<integer>1500</integer>
+				<integer>1800</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Select the voice.</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>kal</string>
+			<key>Key</key>
+			<string>voice</string>
+			<key>Title</key>
+			<string>Voice</string>
+			<key>Titles</key>
+			<array>
+				<string>Diphone</string>
+				<string>Diphone better</string>
+				<string>Clustergen american</string>
+				<string>Clustergen british</string>
+				<string>Clustergen female</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<string>kal</string>
+				<string>kal16</string>
+				<string>rms</string>
+				<string>awb</string>
+				<string>slt</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Mix with background music without intrerupting it.</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Background mix</string>
+			<key>Key</key>
+			<string>mixEnabled</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Graphs View Controller-->
+        <scene sceneID="c7c-ap-Ddv">
+            <objects>
+                <viewController storyboardIdentifier="GraphsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eGA-t1-Ahq" customClass="GraphsViewController" customModule="VAInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Uw-Y7-pVC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W8V-EM-CpW">
+                                <rect key="frame" x="16" y="10" width="343" height="583"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-Sc-KxL" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="187.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-Nb-rRV" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="197.5" width="343" height="188"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggj-NR-7gw" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="395.5" width="343" height="187.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W8V-EM-CpW" firstAttribute="top" secondItem="Hr8-NG-dVS" secondAttribute="top" constant="10" id="BPR-8r-0GW"/>
+                            <constraint firstAttribute="bottom" secondItem="W8V-EM-CpW" secondAttribute="bottom" constant="10" id="ey0-SY-4hT"/>
+                            <constraint firstItem="Hr8-NG-dVS" firstAttribute="trailing" secondItem="W8V-EM-CpW" secondAttribute="trailing" constant="16" id="s34-7H-Wdz"/>
+                            <constraint firstItem="W8V-EM-CpW" firstAttribute="leading" secondItem="Hr8-NG-dVS" secondAttribute="leading" constant="16" id="yp9-GB-ceH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hr8-NG-dVS"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="battChart" destination="ggj-NR-7gw" id="0Yg-ja-WPv"/>
+                        <outlet property="cpuChart" destination="Urz-Sc-KxL" id="6SY-am-ueC"/>
+                        <outlet property="memChart" destination="GqP-Nb-rRV" id="tDa-Rm-5m4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Luw-BM-Ik7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530.39999999999998" y="-262.21889055472263"/>
+        </scene>
+    </scenes>
+</document>

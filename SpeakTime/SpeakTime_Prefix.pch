@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'SpeakTime' target in the 'SpeakTime' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+
+#define INTERFACE_IS_4INCH    ( [ [ UIScreen mainScreen ] bounds ].size.height == 568 )
+#define INTERFACE_IS_PAD     ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define INTERFACE_IS_PHONE   ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
